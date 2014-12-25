@@ -1,0 +1,19 @@
+{
+    "appKeys": {},
+    "capabilities": [
+        ""
+    ],
+    "companyName": "Roy Portas",
+    "longName": "Pebble First App",
+    "projectType": "native",
+    "resources": {
+        "media": []
+    },
+    "shortName": "Pebble First App",
+    "uuid": "63286d0d-6620-4e3f-ae80-10d9f5bab08e",
+    "versionCode": 1,
+    "versionLabel": "1.0",
+    "watchapp": {
+        "watchface": true
+    }
+}
