@@ -25,8 +25,8 @@ static void tickHandler(struct tm *tickTime, TimeUnits unitsChanged){
 
 static void main_window_load(Window *window){
   sTimeLayer = text_layer_create(GRect(0, 55, 144, 50));
-  text_layer_set_background_color(sTimeLayer, GColorClear);
-  text_layer_set_text_color(sTimeLayer, GColorBlack);
+  text_layer_set_background_color(sTimeLayer, GColorBlack);
+  text_layer_set_text_color(sTimeLayer, GColorClear);
   
   text_layer_set_font(sTimeLayer, fonts_get_system_font(FONT_KEY_BITHAM_42_BOLD));
   text_layer_set_text_alignment(sTimeLayer, GTextAlignmentCenter);
@@ -43,6 +43,7 @@ static void main_window_unload(Window *window){
 
 static void init(){
   sMainWindow = window_create();
+  window_set_background_color(sMainWindow, GColorBlack);
   window_set_window_handlers(sMainWindow, (WindowHandlers){.load = main_window_load,                                                           .unload = main_window_unload});
   window_stack_push(sMainWindow, true); //Show the window on the watch with animations activated
   tick_timer_service_subscribe(MINUTE_UNIT, tickHandler);
